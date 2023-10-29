@@ -50,6 +50,9 @@ nav {
   font-size: 1.5rem;
   margin-left: 0.3rem;
 }
+.logo-name a {
+  color: inherit;
+}
 .nav-content {
   height: 100%;
   width: 70%;
@@ -74,7 +77,7 @@ nav {
   color: var(--moroon-red);
 }
 .contact-background {
-  background-color: red;
+  background-color: rgb(215, 51, 51);
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.4s linear;
@@ -101,12 +104,40 @@ nav {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--dark-blue);
+  animation: namskar 1s ease-in-out;
 }
 .lastName {
   font-size: 3rem;
   font-family: 'Times New Roman', Times, serif;
   color: var(--dark-blue);
+  animation: name 1s ease-in-out;
 }
+@keyframes namskar {
+  0% {
+    transform: translateX(3rem);
+  }
+  30% {
+    transform: translateX(0rem);
+  }
+  40% {
+    transform: translateX(2rem);
+  }
+  60% {
+    transform: translateX(0rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes name {
+  0% {
+    transform: translateY(3rem);
+  }
+}
+
 .hero-content .btn {
   height: 3rem;
   width: 10rem;
@@ -150,4 +181,11 @@ nav {
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 7%;
   height: 25rem;
+}
+
+/* About Section */
+.about {
+  height: 100vh;
+  width: 100%;
+  background-color: pink;
 }
