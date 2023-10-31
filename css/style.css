@@ -6,9 +6,9 @@
 }
 
 :root {
-  --nav-color: #eff1eb;
-  --body-color: #eff1ea;
-  --dark-blue: #242364;
+  --nav-color: #ffffff;
+  --body-color: #ffffff;
+  --dark-blue: #2b2973;
   --moroon-red: #a32c2c;
 }
 
@@ -18,6 +18,13 @@ nav {
   background-color: var(--nav-color);
   display: flex;
   font-weight: bold;
+  overflow: hidden;
+}
+
+.navSticky {
+  position: fixed;
+  background-color: var(--nav-color);
+  opacity: 0.8;
 }
 .nav-logo {
   height: 100%;
@@ -25,10 +32,10 @@ nav {
   background-color: var(--nav-color);
   display: flex;
   align-items: center;
-  padding: 4rem;
+  padding-left: 5rem;
 }
 
-/* ************************** Making nav icon ******************* */
+/* *** Making nav icon *** */
 
 .nav-logo .logo-img .logo-box-1 {
   height: 2rem;
@@ -116,7 +123,9 @@ nav {
   color: var(--dark-blue);
   line-height: 1.5rem;
 }
-
+.hero-content-media a {
+  text-decoration: none;
+}
 .media-custom {
   font-size: 1.5rem;
   margin-right: 1rem;
@@ -142,7 +151,7 @@ nav {
   margin-right: 1rem;
   color: var(--dark-blue);
 }
-/* ****************** hero section image part ****************** */
+/* **** hero section image part **** */
 .hero-img {
   background-color: var(--body-color);
   height: 85vh;
@@ -153,32 +162,90 @@ nav {
   align-items: center;
 }
 .hero-img img {
-  height: 15rem;
+  height: 20rem;
   border-radius: 50%;
-  border: 2px solid rgb(11, 6, 6);
-  animation: profile-img-movement 5s linear infinite;
+  position: relative;
+  bottom: 4rem;
 }
-@keyframes profile-img-movement {
-  0% {
-    transform: skewX(6deg);
-  }
-  25% {
-    transform: skewY(-6deg);
-  }
-  50% {
-    transform: skew(3deg);
-  }
-  75% {
-    transform: skewX(-6deg);
-  }
-  100% {
-    transform: skewY(-6deg);
-  }
-}
-
-/* About Section */
+/* ********************* About Section ************** */
 .about {
   height: 100vh;
   width: 100%;
   background-color: pink;
+  display: flex;
+}
+/* image content */
+.abt-img-sec {
+  background-color: var(--body-color);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.abt-img-sec img {
+  height: 22rem;
+  width: 30rem;
+  border-radius: 5px;
+}
+/* about content */
+.abt-content-sec {
+  background-color: var(--body-color);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem;
+}
+.abt-content-sec .inner-div {
+  background-color: var(--body-color);
+  height: 22rem;
+  width: 21rem;
+}
+.inner-div .section-title {
+  color: #5c97e5;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.inner-div .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+}
+.inner-div .description {
+  color: rgb(104, 95, 95);
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+.inner-div button {
+  height: 2.5rem;
+  width: 10rem;
+}
+
+/* ************************ Project section *********************** */
+.project {
+  height: 100vh;
+  width: 100%;
+  background-color: pink;
+  padding-left: 4rem;
+  padding-top: 5rem;
+  padding: 4rem 5rem 0rem 5rem;
+  overflow: hidden;
+}
+.project-title {
+  color: #5c97e5;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.project-desc {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+}
+.projects-content {
+  height: auto;
+  width: 100%;
+  background-color: yellow;
 }
