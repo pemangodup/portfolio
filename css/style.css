@@ -10,7 +10,8 @@
   --nav-color: #ffffff;
   --body-color: #ffffff;
   --dark-blue: #2b2973;
-  --moroon-red: #a32c2c;
+  --moroon-red: rgb(205, 65, 65);
+  --light-blue: #4376d5;
 }
 
 nav {
@@ -59,10 +60,10 @@ nav {
 .logo-name {
   font-size: 1.5rem;
   margin-left: 0.3rem;
+  color: var(--dark-blue);
 }
 .logo-name a {
   color: inherit;
-  text-decoration: none;
 }
 .nav-content {
   height: 100%;
@@ -78,15 +79,14 @@ nav {
   width: 100%;
   justify-content: space-evenly;
 }
+
 .nav-content ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-.nav-content ul li {
   transition: color 0.3s linear;
+  color: var(--dark-blue);
 }
-.nav-content ul li:hover {
-  color: var(--moroon-red);
+
+.nav-content ul li a:hover {
+  color: var(--light-blue);
 }
 .contact-background {
   background-color: rgb(215, 51, 51);
@@ -161,12 +161,45 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(rgb(245, 189, 189), rgb(149, 149, 241));
 }
 .hero-img img {
-  height: 20rem;
-  border-radius: 50%;
+  height: 15rem;
   position: relative;
   bottom: 4rem;
+  border: 0.5px solid black;
+  animation: image-animation 8s linear infinite;
+  transition: all 1s linear;
+}
+@keyframes image-animation {
+  0% {
+    border-radius: 63% 38% 34% 53% / 64% 49% 45% 30%;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    border-radius: 76% 28% 54% 35% / 48% 38% 54% 48%;
+    border-color: red;
+    bottom: 100px;
+  }
+  50% {
+    border-radius: 54% 51% 17% 75% / 25% 38% 54% 63%;
+    border-color: var(--light-blue);
+    top: 10px;
+    left: 30px;
+  }
+  80% {
+    border-radius: 54% 51% 17% 75% / 14% 76% 23% 76%;
+    border-color: var(--dark-blue);
+    left: 20px;
+    bottom: 10px;
+  }
+  100% {
+    border-radius: 63% 38% 34% 53% / 64% 49% 45% 30%;
+    border-color: var(--body-color);
+    top: 0;
+    left: 0;
+  }
 }
 /* ********************* About Section ************** */
 .about {
@@ -299,33 +332,78 @@ nav {
 .contact-sec {
   height: 100vh;
   width: 100%;
-  background-color: red;
-  padding-left: 4rem;
-  padding-top: 5rem;
-  padding: 4rem 5rem 0rem 5rem;
+  background-color: rgb(245, 239, 239);
+  padding: 4rem 5rem;
   display: flex;
 }
 .contact-form {
   height: 100%;
-  width: 50%;
-  background-color: yellow;
-  padding: 1rem 2rem 0 0;
+  width: 65%;
+  background-color: var(--body-color);
+  border-radius: 0.3rem;
+  padding: 0 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form .form-title {
+  color: #5c97e5;
+  font-weight: bold;
 }
 .contact-form input {
-  height: 2.2rem;
+  height: 2.5rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  border: 0.5px solid var(--light-blue);
+  border-radius: 0.3rem;
+}
+.contact-form textarea {
+  border: 0.5px solid var(--light-blue);
+  border-radius: 0.3rem;
 }
 .contact-form form {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
+  margin-top: 2rem;
 }
 .contact-form form div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
+.contact-form form button {
+  height: 3rem;
+  width: 10rem;
+  background-color: var(--light-blue);
+  border: 0px solid black;
+  border-radius: 0.3rem;
+  color: white;
+}
 .contact-details {
   height: 100%;
-  width: 50%;
-  background-color: pink;
+  width: 35%;
+  background-color: var(--light-blue);
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+  overflow: hidden;
+}
+.contact-details-heading {
+  height: 3rem;
+  color: var(--body-color);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.contact-details-body {
+  height: 100%;
+}
+.hehe {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  color: white;
+}
+.icon {
+  margin-right: 3rem;
 }
