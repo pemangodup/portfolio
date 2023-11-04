@@ -12,6 +12,7 @@
   --dark-blue: #2b2973;
   --moroon-red: rgb(205, 65, 65);
   --light-blue: #4376d5;
+  --section-color: rgb(251, 250, 250);
 }
 
 nav {
@@ -160,16 +161,15 @@ nav {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgb(245, 189, 189), rgb(149, 149, 241));
+  padding-top: 5rem;
 }
 .hero-img img {
   height: 15rem;
   position: relative;
   bottom: 4rem;
-  border: 0.5px solid black;
   animation: image-animation 8s linear infinite;
   transition: all 1s linear;
+  background-color: var(--section-color);
 }
 @keyframes image-animation {
   0% {
@@ -179,24 +179,21 @@ nav {
   }
   25% {
     border-radius: 76% 28% 54% 35% / 48% 38% 54% 48%;
-    border-color: red;
-    bottom: 100px;
+    bottom: 30px;
+    left: 30px;
   }
   50% {
     border-radius: 54% 51% 17% 75% / 25% 38% 54% 63%;
-    border-color: var(--light-blue);
-    top: 10px;
+    top: 0px;
     left: 30px;
   }
   80% {
-    border-radius: 54% 51% 17% 75% / 14% 76% 23% 76%;
-    border-color: var(--dark-blue);
-    left: 20px;
-    bottom: 10px;
+    border-radius: 76% 28% 54% 35% / 48% 38% 54% 48%;
+    right: 30px;
+    bottom: 300px;
   }
   100% {
     border-radius: 63% 38% 34% 53% / 64% 49% 45% 30%;
-    border-color: var(--body-color);
     top: 0;
     left: 0;
   }
@@ -216,6 +213,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--section-color);
 }
 .abt-img-sec img {
   height: 22rem;
@@ -230,6 +228,7 @@ nav {
   display: flex;
   align-items: center;
   line-height: 1.5rem;
+  background-color: var(--section-color);
 }
 .abt-content-sec .inner-div {
   background-color: var(--body-color);
@@ -237,7 +236,7 @@ nav {
   width: 21rem;
 }
 .inner-div .section-title {
-  color: #5c97e5;
+  color: var(--light-blue);
   font-weight: bold;
   margin-bottom: 0.8rem;
 }
@@ -267,7 +266,7 @@ nav {
   overflow: hidden;
 }
 .projects-title {
-  color: #5c97e5;
+  color: var(--light-blue);
   font-weight: bold;
   margin-bottom: 0.8rem;
 }
@@ -313,7 +312,7 @@ nav {
 }
 
 .project-description-sec .project-title {
-  color: #5c97e5;
+  color: var(--light-blue);
   font-weight: bold;
   margin-bottom: 0.8rem;
 }
@@ -332,7 +331,7 @@ nav {
 .contact-sec {
   height: 100vh;
   width: 100%;
-  background-color: rgb(245, 239, 239);
+  background-color: var(--section-color);
   padding: 4rem 5rem;
   display: flex;
 }
@@ -347,7 +346,7 @@ nav {
   justify-content: center;
 }
 .contact-form .form-title {
-  color: #5c97e5;
+  color: var(--light-blue);
   font-weight: bold;
 }
 .contact-form input {
@@ -387,6 +386,7 @@ nav {
   padding-top: 1rem;
   padding-left: 1.2rem;
   overflow: hidden;
+  border-radius: 0.3rem;
 }
 .contact-details-heading {
   height: 3rem;
@@ -406,4 +406,11 @@ nav {
 }
 .icon {
   margin-right: 3rem;
+}
+
+/* *************************** Footer section *************** */
+footer {
+  height: 50vh;
+  width: 100%;
+  background-color: var(--light-blue);
 }
