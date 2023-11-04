@@ -101,7 +101,7 @@ nav {
 }
 
 /* ************************** Hero section ************** */
-.hero {
+#hero {
   display: flex;
 }
 .hero-content {
@@ -199,7 +199,7 @@ nav {
   }
 }
 /* ********************* About Section ************** */
-.about {
+#about {
   height: 100vh;
   width: 100%;
   background-color: pink;
@@ -257,7 +257,7 @@ nav {
 }
 
 /* ************************ Project section *********************** */
-.projects-sec {
+#projects-sec {
   width: 100%;
   background-color: var(--body-color);
   padding-left: 4rem;
@@ -328,7 +328,7 @@ nav {
 }
 
 /* *****************************Contact section ******************* */
-.contact-sec {
+#contact-sec {
   height: 100vh;
   width: 100%;
   background-color: var(--section-color);
