@@ -165,37 +165,26 @@ nav {
 }
 .hero-img img {
   height: 15rem;
-  position: relative;
   bottom: 4rem;
   animation: image-animation 8s linear infinite;
   transition: all 1s linear;
-  background-color: var(--section-color);
+  background-color: var(--light-blue);
 }
 @keyframes image-animation {
   0% {
     border-radius: 63% 38% 34% 53% / 64% 49% 45% 30%;
-    top: 0;
-    left: 0;
   }
   25% {
     border-radius: 76% 28% 54% 35% / 48% 38% 54% 48%;
-    bottom: 30px;
-    left: 30px;
   }
   50% {
     border-radius: 54% 51% 17% 75% / 25% 38% 54% 63%;
-    top: 0px;
-    left: 30px;
   }
   80% {
     border-radius: 76% 28% 54% 35% / 48% 38% 54% 48%;
-    right: 30px;
-    bottom: 300px;
   }
   100% {
     border-radius: 63% 38% 34% 53% / 64% 49% 45% 30%;
-    top: 0;
-    left: 0;
   }
 }
 /* ********************* About Section ************** */
