@@ -13,6 +13,8 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
+    <!-- Include Email.js library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
   <body>
     <nav id="navbar">
@@ -194,15 +196,21 @@
     <section id="contact-sec">
       <div class="contact-form">
         <div class="form-title">Get in touch</div>
-        <form action="">
+        <form action="" id="contactForm">
           <div>
-            <input type="text" placeholder="Name" />
-            <input type="email" name="" id="" placeholder="E-mail" />
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="E-mail" required />
           </div>
 
-          <input type="text" placeholder="Subject" />
-          <textarea name="" id="" cols="10" rows="15"></textarea>
-          <button type="submit">Send Message</button>
+          <input type="text" id="subject" placeholder="Subject" required />
+          <textarea
+            name=""
+            id="message"
+            cols="10"
+            rows="15"
+            required
+          ></textarea>
+          <button type="button" onclick="sendEmail()">Send Message</button>
         </form>
       </div>
       <div class="contact-details">
@@ -213,7 +221,8 @@
               <i class="fa-solid fa-location-dot" style="color: #f3f4f6"></i>
             </div>
             <div class="contact-details-body-address-detail">
-              <strong>Address: </strong> This is my address
+              <strong>Address: </strong> R. Frei Fortunato S. Boaventura, 3-1l
+              DTO Lisboa
             </div>
           </div>
 
@@ -261,5 +270,6 @@
       <div class="subject">Curious Developer</div>
       <div class="icons">Copyright &copy;2023 || Pema Ngodup</div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

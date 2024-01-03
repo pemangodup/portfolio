@@ -348,6 +348,7 @@ nav {
 .contact-form textarea {
   border: 0.5px solid var(--light-blue);
   border-radius: 0.3rem;
+  padding: 1rem;
 }
 .contact-form form {
   display: grid;

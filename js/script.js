@@ -27,3 +27,28 @@ sections.forEach((link) => {
     }
   });
 });
+
+// Send message to email
+function sendEmail() {
+  (function () {
+    emailjs.init('3W3ORkRRT9oHJ1I6o');
+  })();
+  let params = {
+    from_name: document.querySelector('#name').value,
+    email_id: document.querySelector('#email').value,
+    message: document.querySelector('#message').value,
+    subject: document.querySelector('#subject').value,
+  };
+  let serviceId = 'service_xgquioq';
+  let templateId = 'template_lt1e3r8';
+  emailjs
+    .send(serviceId, templateId, params)
+    .then((res) => {
+      alert('Email sent successfully');
+      let form = document.getElementById('contactForm');
+      form.reset();
+    })
+    .catch((error) => {
+      alert('Email sending error: ', error);
+    });
+}
