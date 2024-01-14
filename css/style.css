@@ -50,6 +50,7 @@ nav {
   z-index: 1;
   border: 1.5px solid white;
 }
+
 .nav-logo .logo-img .logo-box-2 {
   height: 2rem;
   width: 2rem;
@@ -66,11 +67,12 @@ nav {
 .logo-name a {
   color: inherit;
 }
+
 .nav-content {
   height: 100%;
   width: 70%;
   padding-left: 25%;
-  background-color: var(--nav-color);
+  /* background-color: var(--nav-color); */
   display: flex;
   align-items: center;
 }
@@ -88,6 +90,34 @@ nav {
 
 .nav-content ul li a:hover {
   color: var(--light-blue);
+}
+.menu-line {
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  .nav-logo {
+    height: 100%;
+    width: 70%;
+    padding-left: 4rem;
+  }
+  .nav-content {
+    display: none;
+  }
+  .menu-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+  }
+  .menu-line i {
+    font-size: 2rem;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .contact-background {
   background-color: rgb(215, 51, 51);
