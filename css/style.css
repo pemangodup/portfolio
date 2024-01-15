@@ -319,12 +319,10 @@ nav {
 /* ************************ Project section *********************** */
 #projects-sec {
   width: 100%;
-  background-color: yellow;
   /* padding: 4rem 5rem 0rem 5rem; */
   padding-left: 4rem;
   padding-bottom: 4rem;
   overflow: hidden;
-  margin-top: 5rem;
 }
 .title-portfolio {
   background-color: pink;
