@@ -319,13 +319,13 @@ nav {
 /* ************************ Project section *********************** */
 #projects-sec {
   width: 100%;
-  /* padding: 4rem 5rem 0rem 5rem; */
   padding-left: 4rem;
   padding-bottom: 4rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .title-portfolio {
-  background-color: pink;
   margin-top: 1rem;
 }
 .projects-title {
@@ -389,10 +389,23 @@ nav {
   padding-right: 1rem;
   text-decoration: none;
 }
+@media only screen and (max-width: 720px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+  .project-img-sec {
+    width: 100%;
+  }
+  .project-description-sec {
+    width: 100%;
+  }
+}
 
 /* *****************************Contact section ******************* */
 #contact-sec {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--section-color);
   padding: 4rem 5rem;
@@ -444,7 +457,7 @@ nav {
   color: white;
 }
 .contact-details {
-  height: 100%;
+  height: 84.5vh;
   width: 35%;
   background-color: var(--light-blue);
   padding-top: 1rem;
@@ -471,7 +484,19 @@ nav {
 .icon {
   margin-right: 3rem;
 }
-
+@media only screen and (max-width: 720px) {
+  #contact-sec {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 0 0;
+    margin-bottom: 1rem;
+  }
+  .contact-details {
+    width: 100%;
+  }
+}
 /* *************************** Footer section *************** */
 footer {
   height: 50vh;
